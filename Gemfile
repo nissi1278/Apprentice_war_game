@@ -6,6 +6,7 @@ ruby "3.3.6"
 gem 'typeprof'
 gem 'sorbet-runtime'
 gem 'steep'
+gem 'activesupport'
 
 group :development do
   gem 'solargraph'
