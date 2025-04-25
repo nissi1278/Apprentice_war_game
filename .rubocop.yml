@@ -3,7 +3,6 @@ inherit_from: .rubocop_todo.yml
 
 plugins:
   - rubocop-performance
-  - rubocop-rails
   - rubocop-minitest
 
 AllCops:
@@ -16,17 +15,12 @@ AllCops:
   Exclude:
     - "Gemfile"
     - "bin/**/*"
-    - "db/**/*"
-    - "log/**/*"
-    - "tmp/**/*"
-    - "vendor/**/*"
-    - "lib/tasks/auto_annotate_models.rake"
-    - "config/environments/*"
-    - "config/puma.rb"
+    - "lib/"
+    - "test/"
 
 ### ルールのカスタマイズ
 
-# 設定が厳しいので一旦全てfalseにする
+# 一旦全てfalseにする
 Metrics:
   Enabled: false
 
@@ -81,12 +75,4 @@ Lint/AssignmentInCondition:
 
 # メソッド名等の命名の指摘
 Naming/PredicateName:
-  Enabled: false
-
-# 未i18nのチェック（バリデーションエラーメッセージをi18nに登録するのはやや冗長？なためfalse）
-Rails/I18nLocaleTexts:
-  Enabled: false
-
-# before_actionの際の未定義メソッドのチェック（deviseとの兼ね合いで一旦false）
-Rails/LexicallyScopedActionFilter:
   Enabled: false
