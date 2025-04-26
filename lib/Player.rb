@@ -1,13 +1,11 @@
 # require_relative ''
 
 class Player
-  attr_accessor :name, :deck, :hand
+  attr_accessor :name, :deck
 
   def initialize(name)
     @name = name
     @deck = []
-    # 勝った際は場札のカードではなく枚数を保持する。
-    @hand = 0
   end
 
   def play_card
@@ -15,5 +13,13 @@ class Player
     puts "#{@name}のカードは#{card.to_s}"
     @deck.delete_at(0)
     { player: self,card: card }
+  end
+
+  def add_deck_cards(place_card)
+    @deck.concat(place_card)
+  end
+
+  def deck_size
+    deck.size
   end
 end

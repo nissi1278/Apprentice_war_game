@@ -13,13 +13,20 @@ class Deck
     end
 
     def create_full_deck
-      suit_array = (1..4).to_a
+      suit_array = %i[スペード ハート ダイヤ クラブ]
       rank_array = (2..14).to_a
       @full_deck = suit_array.product(rank_array).map { |suit,rank| Card.new(suit,rank) }
+      @full_deck << Card.new(nil,15) # Jokerを追加
     end
 
     def deck_shuffle
       @full_deck.shuffle!.shuffle!
+    end
+
+    def deal_cards(player_decks,player_list)
+      player_decks.each_with_index do |player_deck,i|
+        player_list[i].deck = player_deck
+      end
     end
   end
 end
