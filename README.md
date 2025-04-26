@@ -9,9 +9,9 @@ bundle install
 
 ## ディレクトリ構成
 
-実行ファイル：bin/main.rb  
-各種クラスファイル：lib/~.rb  
-テストファイル：test/~.rb
+・実行ファイル：bin/main.rb  
+・各種クラスファイル：lib/~.rb  
+・テストファイル：test/~.rb
 
 ## 実行コマンド
 
