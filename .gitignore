@@ -1,8 +1,10 @@
-
-.devcontainer
-.vscode
+.DS_Store
+Thumbs.db
+.vscode/
+.devcontainer/
+.git/
+/Gemfile.lock
 .rubocop.yml
 .rubocop_todo.yml
-Gemfile.lock
 Guardfile
 Rakefile
