@@ -1,0 +1,8 @@
+
+.devcontainer
+.vscode
+.rubocop.yml
+.rubocop_todo.yml
+Gemfile.lock
+Guardfile
+Rakefile
