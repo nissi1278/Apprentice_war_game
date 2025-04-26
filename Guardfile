@@ -8,6 +8,6 @@ guard :minitest, all_on_start: false do
   end
 
   watch(%r{^lib/(.*?)\.rb$}) do |matches|
-    ["test/#{matches[1]}_test.rb"]
+    ["test/#{matches[1].downcase}_test.rb"]
   end
 end
