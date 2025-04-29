@@ -1,5 +1,3 @@
-# require_relative ''
-
 class Player
   attr_accessor :name, :deck
 
